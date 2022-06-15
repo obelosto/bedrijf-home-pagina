@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Roboto&display=swap');
+
+/* ------------------------------- 1. Global Styles -------------------------------- */
+body{
+    font-family: 'Roboto', sans-serif;
+}
+h1,h2,h3,h4,h5{
+    font-family: 'Merriweather', serif;
+}
+body{
+    margin: 0;
+}
+a{
+    text-decoration: none;
+    color: #5722CD;
+}
+h2{
+    font-size: 2em;
+}
+
+/* ------------------------------- 2. Construction -------------------------------- */
+.outer-container{
+    text-align: center;
+}
+.inner-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    max-width: 1024px;
+    margin: 0 auto;
+    text-align: left;
+}
+header .inner-container{
+    padding-top: 20px;
+    padding-bottom: 128px;
+}
+nav{
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    width: 100%;
+}
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    column-gap: 5em;
+}
+.main-content{
+    margin: 70px 0;
+    text-align: center;
+    max-width: 740px;
+}
+#case-studies{
+    background: #F3F6F9;
+}
+#services .inner-container{
+    display: flex;
+    gap: 40px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+#services .inner-container div{
+    flex-basis: 272px;
+    min-height: max-content;
+    padding: 20px;
+    border: 1px solid #5722CD;
+}
+/* ------------------------------- 3. Deco -------------------------------- */
+header, #form{
+    background-color: #4845E4;
+    color: #fff;
+}
+.hDeco{
+    position: absolute;
+    left: calc( 50% - 57px/2 );
+    bottom: 0;
+}
+.hDeco path {
+    fill: #fff;
+}
+button[type="button"]{
+    background: #ED4385;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 35px;
+    padding: 20px 75px;
+    font-weight: 500;
+    cursor: pointer;
+}
+#about .main-content{
+    color: #5722CD;
+}
+#about p{
+    font-size: 1.3em;
+}
+
+main{
+    padding: 20px 0;
+}
+#case-studies article div{
+    width: 40%;
+    margin-bottom: 30px;
+}
+#case-studies article img{
+    max-width: 534px;
+    min-width: 372px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.75);
+}
+#case-studies article{
+    display: flex;
+    margin-bottom: 60px;
+    column-gap: 5em;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+#case-studies article:nth-child(even){
+    flex-direction: row-reverse;
+}
+#case-studies article div:after{
+    content: "View project";
+    text-transform: uppercase;
+    font-size: smaller;
+    font-weight: bold;
+    color: #5722CD;
+    cursor: pointer;
+}
+#services h4{
+    color: #5722CD;
+}
+#form form{
+    display: flex;
+    flex-direction: column;
+    flex-basis: 100%;
+    width: 100%;
+    gap: 30px;
+}
+form label{
+    text-align: left;
+    font-weight: bold;
+}
+form input, form textarea{
+    width: 100%;
+    padding: 10px;
+    border: 0;
+    margin-top: 0.5em;
+}
+textarea{
+    margin: 0;
+}
+footer{
+    background: #000;
+    color: #fff;
+}
+footer .inner-container{
+    padding: 25px;
+}
+footer p{
+    margin: 0;
+}
+/* ------------------------------- 4. Media -------------------------------- */
+@media (max-width: 1122px)  {
+    #case-studies article div{
+       width: auto;
+        max-width: 534px;
+
+    }
+}
