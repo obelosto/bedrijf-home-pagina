@@ -12,10 +12,13 @@ body{
 }
 a{
     text-decoration: none;
-    color: #5722CD;
+    color: var(--emphasis-color);
 }
 h2{
     font-size: 2em;
+}
+:root {
+    --emphasis-color: #5722CD;
 }
 
 /* ------------------------------- 2. Construction -------------------------------- */
@@ -68,7 +71,7 @@ nav ul{
     flex-basis: 272px;
     min-height: max-content;
     padding: 20px;
-    border: 1px solid #5722CD;
+    border: 1px solid var(--emphasis-color);
 }
 /* ------------------------------- 3. Deco -------------------------------- */
 header, #form{
@@ -94,7 +97,7 @@ button[type="button"]{
     cursor: pointer;
 }
 #about .main-content{
-    color: #5722CD;
+    color: var(--emphasis-color);
 }
 #about p{
     font-size: 1.3em;
@@ -127,11 +130,22 @@ main{
     text-transform: uppercase;
     font-size: smaller;
     font-weight: bold;
-    color: #5722CD;
+    color: var(--emphasis-color);
     cursor: pointer;
 }
+
+#case-studies h3:after{
+    content: "";
+    margin: 2em 0;
+    height: 6px;
+    background: url(assets/squiggle_line.svg) no-repeat;
+    display: block;
+}
 #services h4{
-    color: #5722CD;
+    color: var(--emphasis-color);
+}
+#services img[alt~="icon"]{
+    width: 50px;
 }
 #form form{
     display: flex;
@@ -170,4 +184,25 @@ footer p{
         max-width: 534px;
 
     }
+}
+/* ------------------------------- 5. Zwevende woorden, schuine lijnen -------------------------------- */
+
+header, #about{
+    position: relative;
+}
+#about:before{
+    content: "hello";
+    font-size: 25em;
+    color: #F3F6F9;
+    position: absolute;
+    top: 0;
+    left: 27%;
+}
+.driehoek{
+    height: 0;
+    border-left: 0px solid transparent;
+    border-right: 100vw solid transparent;
+    border-bottom: 30px solid #fff;
+    margin-top: -30px;
+
 }
